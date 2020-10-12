@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30524.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSettingsManager", "AppSettingsManager\AppSettingsManager.csproj", "{6D22A616-6F3D-4DFD-916B-E6A1B5FF4B14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D22A616-6F3D-4DFD-916B-E6A1B5FF4B14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D22A616-6F3D-4DFD-916B-E6A1B5FF4B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D22A616-6F3D-4DFD-916B-E6A1B5FF4B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D22A616-6F3D-4DFD-916B-E6A1B5FF4B14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA1701C9-5261-47EF-A508-6E5D0F3C082A}
+	EndGlobalSection
+EndGlobal
