@@ -24,7 +24,7 @@ namespace AppSettingsManager.Controllers
         public IActionResult Index()
         {
             ViewBag.SendGridKey = _config.GetValue<string>("SendGridKey");
-            ViewBag.TwilioAuthToken = _config.GetValue<string>("Twilio:AuthToken");
+            ViewBag.TwilioAuthToken = _config.GetSection("Twilio").GetValue<string>("AuthToken");
             ViewBag.TwilioAccountSid = _config.GetValue<string>("Twilio:AccountSid");
             return View();
         }
