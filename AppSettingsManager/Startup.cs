@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,9 @@ namespace AppSettingsManager
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var twilioSettings = new TwilioSettings();
+            new ConfigureFromConfigurationOptions<TwilioSettings>(Configuration.GetSection("Twilio")).Configure(twilioSettings);
+            services.AddSingleton(twilioSettings);
             services.Configure<TwilioSettings>(Configuration.GetSection("Twilio"));
             services.AddControllersWithViews();
         }
