@@ -47,7 +47,7 @@ namespace AppSettingsManager.Controllers
             ViewBag.TwilioAuthToken = _twilioSettings.AuthToken;
             ViewBag.TwilioAccountSid = _twilioSettings.AccountSid;
             ViewBag.TwilioPhoneNumber = _twilioSettings.PhoneNumber;
-
+            ViewBag.ConnectionString = _config.GetConnectionString("AppSettingsManagerDb");
 
             //ViewBag.ThirdLevelSettingValue = _config.GetValue<string>("FirstLevelSetting:SecondLevelSetting:BottomLevelSetting");
             //ViewBag.ThirdLevelSettingValue = _config.GetSection("FirstLevelSetting").GetSection("SecondLevelSetting")
