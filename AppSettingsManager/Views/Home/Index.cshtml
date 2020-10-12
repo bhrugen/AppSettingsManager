@@ -1,8 +1,11 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+﻿
+<div class="row mb-2">
+    <div class="col-md-6">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+                <strong class="d-inline-block mb-2 text-primary">SendGrid</strong>
+                <div class="mb-1 text-muted">@ViewBag.SendGridKey</div>
+            </div>
+        </div>
+    </div>
 </div>

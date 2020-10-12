@@ -1,5 +1,6 @@
 ﻿using AppSettingsManager.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -12,14 +13,17 @@ namespace AppSettingsManager.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IConfiguration _config;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IConfiguration config)
         {
             _logger = logger;
+            _config = config;
         }
 
         public IActionResult Index()
         {
+            ViewBag.SendGridKey = _config.GetValue<string>("SendGridKey");
             return View();
         }
 
