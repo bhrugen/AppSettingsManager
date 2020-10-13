@@ -13,7 +13,9 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation",
+        "SendGridKey": "SendGridKey from Environment Variables",
+        "Twilio__PhoneNumber" : "+9999999999 Environment Variable Phone"
       }
     },
     "AppSettingsManager": {
