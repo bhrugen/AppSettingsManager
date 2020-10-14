@@ -35,7 +35,8 @@ namespace AppSettingsManager
                 {
                     return;
                 }
-                builder.AddAzureKeyVault("https://appsettingmanagervault.vault.azure.net/");
+                var builtConfig = builder.Build();
+                builder.AddAzureKeyVault($"https://{builtConfig["KeyVaultName"]}.vault.azure.net/");
 
             })
                 .ConfigureWebHostDefaults(webBuilder =>
